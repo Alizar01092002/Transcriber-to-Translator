@@ -3,132 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/e25860e8c3.js" crossorigin="anonymous"></script>
-    <title>Interface</title>
-    <style>
-        *{
-            margin: auto;
-            padding: auto;
-        }
-        body{
-            background: #6990f2;
-        }
-        .header .title{
-            position: absolute;
-            top: 5%;
-            left: 1.5%;
-            font-size: 30px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            color: rgb(255, 165, 0);
-        }
-        .header .button .icon{
-            position: absolute;
-            top: 14%;
-            height: 30%;
-            left: 37%;
-            width: 80px;
-            height: 35px;
-        }
-        .header .button .icon2{
-            position: absolute;
-            top: 14%;
-            height: 30%;
-            left: 43%;
-            width: 110px;
-            height: 35px;
-        }
-        .header .button .icon3{
-            position: absolute;
-            top: 14%;
-            height: 30%;
-            left: 51%;
-            width: 130px;
-            height: 35px;
-        }
-        .header .button .icon4{
-            position: absolute;
-            top: 44.5%;
-            height: 30%;
-            left: 43.6%;
-            width: 110px;
-            height: 35px;
-        }
-        .header .button .icon5{
-            position: absolute;
-            top: 5%;
-            height: 15%;
-            left: 91%;
-            width: 110px;
-            height: 35px;
-        }
-        
-        button{
-            font-size: medium;
-            color: #6990f2;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover{
-            opacity: 0.7;
-            transition: 0.5s;
-
-        }
-        .header .textbox{
-            position: absolute;
-            top: 21%;
-            left: 30%;
-            
-        }
-        .header .textbox2{
-            position: absolute;
-            top: 50%;
-            left: 30%;
-        }
-        textarea{
-            font-size: 14px;
-            resize: none;
-            border-radius: 8px;
-            border-width: 2px;
-        }
-        textarea::placeholder{
-            font-size: 14px;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Form</title>
 </head>
 <body>
-    <section class="header">
-        <div class="title">
-            TRANSCRIBER
+    <div class="form-box1">
+        <h1 class="transcription-heading">Translation & Transcription:</h1>
+        <div class="container">
+            <input type="file" id="audioInput" accept=".mp3, .wav, .ogg" style="display: none;">
+            <button class="upload" onclick="uploadAudio()">Upload</button>
+            <button class="transcript">Transcript</button>
+            <i class="far fa-copy icon" onclick="copyText()"></i>
         </div>
-        <div class="button">
-            <button class="icon">
-                <i class="fa-solid fa-microphone"></i>
-                Audio
-            </button>
-            <button class="icon2">
-                <i class="fa-solid fa-file-audio"></i>
-                Upload File
-            </button>
-            <button class="icon3">
-                <i class="fa-solid fa-file-image"></i>
-                Upload Image
-            </button>
-            <button class="icon4">
-                <i class="fa-solid fa-language"></i>
-                Translate
-            </button>
-            <button class="icon5">
-                <i class="fa-solid fa-user"></i>
-                Login
-            </button>
-        </div>
-        <div class="textbox">
-            <textarea id="source-text" cols="73" rows="10" placeholder="Transcribed Text"></textarea>
-        </div>
-        <div class="textbox2">
-            <textarea id="sorcetext1" cols="73" rows="10" placeholder="Translated Text"></textarea>  
-        </div>
-    </section>
+                <textarea class="auto-resize-textarea" id="transcriptionTextarea"></textarea>
+    </div>
+    <script src="script.js">
+
+    </script>
 </body>
 </html>
